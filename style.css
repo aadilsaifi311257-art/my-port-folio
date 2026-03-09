@@ -71,6 +71,7 @@ section {
 .navbar a:hover,
 .navbar a.active {
     color: var(--text-color);
+    display: block;
 }
 
 #menu-icon {
@@ -435,6 +436,114 @@ font-size: 3rem;
     text-align: center;
     font-size: 16px;
     color: var(--text-color);
+}
+
+/* ========== Responsive Design ========== */
+
+@media (max-width: 1200px) {
+    html{
+        font-size: 55%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 991px){
+
+    .header{
+        padding: 2rem 3%;
+    }
+
+    section{
+        padding: 10rem 3% 2rem;
+    }
+
+    .services{
+        padding-bottom: 7rem;
+    }
+
+    .projects .wrapper{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px){
+
+    #menu-icon{
+        display: block;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--main-color);
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        transition: .3s ease;
+    }
+
+    .navbar.active{
+        right: 0;
+    }
+
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 2rem 0;
+    }
+
+    .home{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-img img{
+        height: 250px;
+        right: 0;
+        top: 0;
+        margin-bottom: 2rem;
+    }
+
+    .home-content{
+        margin-left: 0;
+    }
+
+    .about{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-img img{
+        width: 40vw;
+        margin-top: 3rem;
+    }
+
+    .services-container{
+        flex-direction: column;
+    }
+
+    .wrapper{
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* Small Mobile */
+@media (max-width: 450px){
+
+    html{
+        font-size: 50%;
+    }
+
+    .contact form .input-box input{
+        width: 100%;
+    }
+
 }
 
 
